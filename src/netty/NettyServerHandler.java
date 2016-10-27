@@ -67,6 +67,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<BaseMsg> {
             case PUSH:
             	PushMsg pushMsg=(PushMsg)baseMsg;
             	System.out.println("客户端"+pushMsg.getPhoneNum()+":"+pushMsg.getContent());
+            	PushServer.push("12345","已收到");
                 break;
             default:
                 System.out.println("default。。");
